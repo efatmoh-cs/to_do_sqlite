@@ -20,8 +20,22 @@ class ArchivedScreen extends StatelessWidget {
           final tasks = MainScreenCubit.of(context).archivedTasks;
 
           if (tasks.isEmpty) {
-            return const Center(child: Text('No archived tasks', style:  TextStyle(
-                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.grey),));
+            return const Center(child:
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.archive, size: 80, color: Colors.grey),
+                SizedBox(height: 10),
+                Text(
+                  "No archived tasks!",
+                  style: TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey),
+                ),
+
+
+              ],
+            ),
+            );
           }
 
           return ListView.separated(
