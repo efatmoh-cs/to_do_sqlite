@@ -19,13 +19,23 @@ class DoneScreen extends StatelessWidget {
 
           if (tasks.isEmpty) {
             return const Center(
-                child: Text(
-              'No completed tasks',
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey),
-            ));
+                child:
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.task_alt, size: 80, color: Colors.grey),
+                    SizedBox(height: 10),
+                    Text(
+                      "No completed tasks!",
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey),
+                    ),
+
+
+                  ],
+                ),
+
+            );
           }
 
           return ListView.separated(
