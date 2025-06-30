@@ -10,15 +10,7 @@ import '../layout/archived.dart';
 import '../layout/done_screen.dart';
 import '../layout/new_screen.dart';
 
-// main_screen_cubit.dart
-// import 'package:bloc/bloc.dart';
-// import 'package:flutter/material.dart';
-// import 'package:sqflite/sqflite.dart';
-//
-// import '../layout/new_screen.dart';
-// import '../layout/done_screen.dart';
-// import '../layout/archived_screen.dart';
-// import 'todo_states.dart';   // see state classes below
+
 
 class MainScreenCubit extends Cubit<TodoStates> {
   MainScreenCubit() : super(InitialState());
